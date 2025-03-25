@@ -49,9 +49,8 @@ void SortVisualizer::run() {
         if (!sc.isSorted(array)) {
             is.insertionSort(array, array.size(), [&]() {
                 ds.drawSort(array.size(), array, window);
-                window.display(); // Call window.display() after drawing the updated state
-
-                // Sleep for a short duration, e.g., 100 milliseconds
+                window.display(); 
+                
                 std::this_thread::sleep_for(std::chrono::milliseconds(1));
                 });
         }
